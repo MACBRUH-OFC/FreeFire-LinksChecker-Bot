@@ -1,0 +1,10 @@
+app = "LinkCheckerBot"
+primary_region = "sin" # or your closest region
+
+[env]
+BOT_TOKEN = "7993833443:AAFMoL8sABJ19F9IQCh0olaUT8DAySOYS3k"
+GROUP_ID = "-1002252657532"
+
+[mounts]
+source = "bot_data"
+destination = "/app"
