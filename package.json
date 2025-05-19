@@ -1,8 +1,11 @@
 {
-  "name": "linkchecker-bot",
+  "name": "freefire-linkschecker-bot",
   "version": "1.0.0",
+  "description": "A Telegram bot that checks and manages Free Fire links in a group.",
   "main": "index.js",
-  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "node-telegram-bot-api": "^0.61.0"
   }
