@@ -1,10 +1,11 @@
-app = "LinkCheckerBot"
-primary_region = "sin" # or your closest region
+app = "linkchecker-bot"           # Must match your Fly.io app name (lowercase, dashes)
+primary_region = "sin"            # Use your closest region code (e.g., sin for Singapore)
 
 [env]
-BOT_TOKEN = "7993833443:AAFMoL8sABJ19F9IQCh0olaUT8DAySOYS3k"
-GROUP_ID = "-1002252657532"
+# It is best NOT to store secrets directly here. Use 'flyctl secrets set' for BOT_TOKEN and GROUP_ID.
+# BOT_TOKEN = ""
+# GROUP_ID = ""
 
 [mounts]
 source = "bot_data"
-destination = "/app"
+destination = "/app"              # Change this if your code expects persistent files elsewhere
