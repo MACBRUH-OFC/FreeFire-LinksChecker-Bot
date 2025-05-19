@@ -1,10 +1,11 @@
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 const path = require('path');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args)); // node-fetch v3 ESM import workaround
 
 const TOKEN = process.env.BOT_TOKEN;
 const GROUP_ID = parseInt(process.env.GROUP_ID, 10);
-const DATA_FILE = path.join(__dirname, 'links_db.json'); // persistent on Fly with attached volume
+const DATA_FILE = path.join(__dirname, 'links_db.json');
 const MAX_LINKS = 100;
 
 // Ensure the data file exists
